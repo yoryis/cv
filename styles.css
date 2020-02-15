@@ -1,0 +1,246 @@
+/*** Internal CSS***/
+/*** Selector Priority: selector is an element: class, id, html tag, the priority will be: id, class then html tag***/
+
+
+/*** Tag Styles***/
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+
+p {
+  color: #333E50;
+}
+
+span {
+  color: #333E50;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #333E50;
+  border-width: 6px;
+  width: 4%;
+  margin: 1rem auto;
+}
+
+.navbar-image {
+  width: 10%; /*** To reduce the image size***/
+  border-radius: 100%; /*** To make image circle***/
+}
+
+/*** Tag Styles Headings***/
+.big-heading {
+  font-family: 'Montserrat-Black', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+.meddium-heading {
+  font-family: 'Montserrat-Black', sans-serif;
+  font-size: 2.0rem;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+.small-heading {
+  font-family: 'Montserrat-Black', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+.pricing-heading-h2 {
+  font-size: 3rem; /*** Increase font size***/
+  line-height: 1.5; /*** To add space between lines***/
+}
+
+/*** Class Styles***/
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/*** Colored or White Sections ***/
+.colored-section {
+	background-color: #00A1E0;
+	color: #FFFFFF;
+}
+.white-section {
+	 background-color: #FFFFFF; /* The background color should be white otherwise it will be transparent **/
+}
+
+/*** ID Styles***/
+
+/*** Navigation Bar***/
+.navbar {
+    padding: 0;
+    margin: 0 auto 30px;
+    background-color: #333E50;
+}
+
+.row {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: 'Montserrat-Light', sans-serif;
+}
+
+/*** Custom Class Styles***/
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/*** Title Section***/
+
+/*** #section<space>.class, change inside the class that is contained inside section***/
+/*** The syntax is element<space>element and is read from righ to left. This is hierarchical***/
+/*** The syntax element.element like: h1.title this means that for all h1 having class .title then do something***/
+#title .container-fluid {/** Apply this specific rule on this specific section this will override the previous one from .container-fluid ***/
+  padding: 3% 15% 7%;
+  text-align: left;
+}
+
+.title-image {
+  width: 100%;
+  /* transform: rotate(25deg); */
+  /* This is to change the position and display image under feature */
+  position: absolute;
+  right: 3%;
+}
+
+/*** Features Section***/
+#features {
+  /* This is to change the position and display feature on the top of image */
+  position: relative; /* Set to relative to keep the section on the html flow*/
+  z-index: 1; /*As per flow on PDF flow chart we could remove this line*/
+}
+
+
+.features-text-h3 {
+  font-size: 1.5rem;
+  color: #333E50;
+}
+
+.icon-color {
+  color: #333E50;
+  margin-bottom: 1rem; /*** Add some margin under the icon***/
+}
+
+.icon-color:hover {
+  color: #ff4c68;
+}
+
+.img-skill-row {
+  width: 30%;
+  padding-bottom: 1rem;
+  /* float: left; */
+  margin-right: 30px;
+}
+
+
+/*** Testimonials Section***/
+#experiences {
+     /***padding: 7% 15%; To separate sections***/
+/***This color will override the color from colored-section class since there is css hierarchy: first id, then class then html tag***/
+    /* background-color: #ef8172; */
+    background-color: #00A1E0;
+}
+
+.testimonials-image {
+  width: 10%; /*** To reduce the image size***/
+  border-radius: 100%; /*** To make image circle***/
+  margin: 20px;/*** To separate text and image***/
+}
+
+.testimonials-text-h2 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonials-text-h3 {
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/*** Press Section will be united to Testimonials using the same background color***/
+#press {
+    padding-bottom: 3%; /*** To separate sections***/
+    background-color: #65C8FF;
+}
+
+.press-image {
+  width: 15%; /*** To reduce the image size***/
+  margin: 20px 20px 50px; /*** To images and add space on the bottom***/
+}
+
+/* Pricing Section */
+#skills {
+  padding: 100px;
+  color: #333E50;
+}
+
+.pricing-column {
+  padding: 0 2%; /*** Adding some space between each card and separate from the top***/
+  color: #333E50;
+}
+
+.pricing-text-h2 {
+  color: #333E50;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Call to Action Section */
+.contact-me {
+  margin: 100px auto 100px auto;
+  text-align: center;
+}
+
+/* Footer Section */
+
+
+.social-icon {
+  margin: 20px 10px; /* 20px top and botton and 10px right and left */
+}
+
+/*** Media Query @media <type> <feature> ***/
+/** Viewport is the size of the screen that your website is being displayed **/
+/** When size is less than 1028px then align center h1 and image**/
+@media (max-width: 1028px) {
+  h1 {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static; /** Image is not cut off, it is back to the html flow **/
+    transform: rotate(0); /** Rotate back to normal **/
+  }
+}
+
+.copyright {
+  color: #333E50;
+  font-size: 1rem; /*Make it smaller*/
+  /* padding: 20px 0; */
+  font-family: 'Montserrat', sans-serif;
+}
